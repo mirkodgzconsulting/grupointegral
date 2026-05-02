@@ -1,0 +1,62 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import Badge from '../../components/ui/Badge.astro';
+import Button from '../../components/ui/Button.astro';
+---
+<Layout
+  title="Test Oficial de Italiano A2 B1 | Grupo Integral Milano"
+  description="Exámenes A2 y B1 reconocidos por el Ministerio del Interior italiano. Válidos para ciudadanía y permesso di soggiorno de largo periodo. Todos los sábados en Milán."
+  canonical="https://grupointegral.it/servicios/test-italiano"
+  keywords="test italiano A2 B1 Milano, examen italiano ciudadanía, test italiano soggiorno lungo periodo, certificado italiano Milano"
+>
+  <Navbar />
+  <main class="pt-28">
+    <section class="section-padding bg-bg-section">
+      <div class="container-gi max-w-3xl">
+        <nav class="text-xs text-text-body/60 mb-6 flex items-center gap-1.5">
+          <a href="/" class="hover:text-accent transition-colors">Inicio</a><span>›</span>
+          <span>Servicios</span><span>›</span><span>Test de italiano</span>
+        </nav>
+        <Badge class="mb-4">Examen oficial · Todos los sábados</Badge>
+        <h1 class="font-heading font-bold text-primary mb-5" style="font-size:clamp(30px,5vw,44px);line-height:1.1">
+          Test Oficial de Italiano A2 y B1
+        </h1>
+        <p class="text-text-body text-lg leading-relaxed mb-4">
+          Los exámenes A2 y B1 de italiano son reconocidos por el Ministerio del Interior italiano y son obligatorios para solicitar el permesso di soggiorno de largo periodo y la ciudadanía italiana.
+        </p>
+        <p class="text-text-body leading-relaxed mb-8">
+          En Grupo Integral organizamos sesiones cada sábado en grupos reducidos para garantizar atención personalizada. El servicio incluye preparación previa al examen.
+        </p>
+        <div class="grid sm:grid-cols-3 gap-4 mb-10">
+          {[
+            { label: 'Frecuencia', value: 'Todos los sábados' },
+            { label: 'Grupos', value: 'Reducidos' },
+            { label: 'Preparación', value: 'Incluida' },
+          ].map(i => (
+            <div class="bg-white rounded-card border border-border p-5 text-center">
+              <p class="font-heading font-bold text-accent text-lg mb-1">{i.value}</p>
+              <p class="text-text-body text-xs">{i.label}</p>
+            </div>
+          ))}
+        </div>
+        <div class="space-y-4 mb-10">
+          {[
+            { level: 'A2', title: 'Nivel A2 — Básico', desc: 'Requerido para la conversión o renovación del permesso di soggiorno en ciertos casos. Evalúa comprensión y expresión básica en italiano.' },
+            { level: 'B1', title: 'Nivel B1 — Intermedio', desc: 'Obligatorio para el permesso di soggiorno di lungo periodo (carta di soggiorno) y para solicitar la ciudadanía italiana por residencia.' },
+          ].map(l => (
+            <div class="bg-white rounded-card border border-border p-6">
+              <span class="inline-block bg-bg-accent text-accent text-xs font-heading font-bold px-2 py-0.5 rounded mb-2">{l.level}</span>
+              <h3 class="font-heading font-semibold text-primary text-base mb-2">{l.title}</h3>
+              <p class="text-text-body text-sm leading-relaxed">{l.desc}</p>
+            </div>
+          ))}
+        </div>
+        <Button href="/#contacto" variant="primary" size="lg">Reservar mi examen</Button>
+        <p class="text-sm text-text-body/60 mt-3">Consulta disponibilidad. Te respondemos en menos de 24h.</p>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

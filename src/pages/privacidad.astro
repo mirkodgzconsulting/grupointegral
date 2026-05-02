@@ -1,0 +1,52 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+<Layout
+  title="Política de Privacidad | Grupo Integral"
+  description="Política de privacidad de Grupo Integral conforme al Reglamento General de Protección de Datos (RGPD) y normativa italiana."
+  canonical="https://grupointegral.it/privacidad"
+>
+  <Navbar />
+  <main class="pt-28">
+    <section class="section-padding bg-white">
+      <div class="container-gi max-w-3xl prose prose-slate max-w-none">
+        <h1 class="font-heading font-bold text-primary mb-2" style="font-size:clamp(28px,4vw,40px)">Política de Privacidad</h1>
+        <p class="text-text-body/60 text-sm mb-10">Última actualización: mayo 2026</p>
+
+        <div class="space-y-8 text-text-body leading-relaxed">
+          <div>
+            <h2 class="font-heading font-bold text-primary text-xl mb-3">1. Responsable del tratamiento</h2>
+            <p>Grupo Integral, con domicilio en Lombardía, Italia. Contacto: <a href="mailto:info@grupointegral.it" class="text-accent hover:underline">info@grupointegral.it</a></p>
+          </div>
+          <div>
+            <h2 class="font-heading font-bold text-primary text-xl mb-3">2. Datos que recopilamos</h2>
+            <p>A través del formulario de contacto recopilamos: nombre completo, teléfono, dirección de email, país de origen y la consulta que nos envías. No recopilamos datos sensibles.</p>
+          </div>
+          <div>
+            <h2 class="font-heading font-bold text-primary text-xl mb-3">3. Finalidad del tratamiento</h2>
+            <p>Los datos se utilizan exclusivamente para responder a tu consulta y, con tu consentimiento, para enviarte información sobre nuestros servicios. No los vendemos ni cedemos a terceros.</p>
+          </div>
+          <div>
+            <h2 class="font-heading font-bold text-primary text-xl mb-3">4. Base legal</h2>
+            <p>El tratamiento se basa en el consentimiento expreso del usuario (Art. 6.1.a RGPD) otorgado al marcar la casilla de aceptación en el formulario de contacto.</p>
+          </div>
+          <div>
+            <h2 class="font-heading font-bold text-primary text-xl mb-3">5. Plazo de conservación</h2>
+            <p>Conservamos los datos durante el tiempo necesario para gestionar tu consulta y, en caso de relación contractual, durante el plazo legalmente establecido.</p>
+          </div>
+          <div>
+            <h2 class="font-heading font-bold text-primary text-xl mb-3">6. Tus derechos</h2>
+            <p>Tienes derecho a acceder, rectificar, suprimir, limitar y portabilizar tus datos, así como a oponerte a su tratamiento. Puedes ejercer estos derechos escribiendo a <a href="mailto:info@grupointegral.it" class="text-accent hover:underline">info@grupointegral.it</a>.</p>
+          </div>
+          <div>
+            <h2 class="font-heading font-bold text-primary text-xl mb-3">7. Cookies</h2>
+            <p>Consulta nuestra <a href="/cookies" class="text-accent hover:underline">política de cookies</a> para más información sobre las cookies que utilizamos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

@@ -1,0 +1,55 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import Badge from '../../components/ui/Badge.astro';
+import Button from '../../components/ui/Button.astro';
+
+const services = [
+  { title: 'Apertura de Partita IVA', desc: 'Te ayudamos a elegir el régimen fiscal correcto (forfettario o ordinario) y tramitamos la apertura.' },
+  { title: 'Declaración de renta (730 / Unico)', desc: 'Preparación y presentación de tu declaración anual de forma correcta y sin errores.' },
+  { title: 'Gestión contable mensual', desc: 'Seguimiento de facturas, gastos y obligaciones fiscales mes a mes.' },
+  { title: 'Cierre de Partita IVA', desc: 'Procedimiento de baja correcta con todos los requisitos legales cubiertos.' },
+  { title: 'ISEE y certificaciones', desc: 'Cálculo del ISEE para acceder a bonificaciones, subsidios y servicios públicos.' },
+  { title: 'Asesoría para autónomos extranjeros', desc: 'Explicamos las particularidades del sistema fiscal italiano para personas de origen extranjero.' },
+];
+---
+<Layout
+  title="Partita IVA para Extranjeros en Italia | Grupo Integral"
+  description="Apertura de Partita IVA, declaración de renta y asesoría fiscal para autónomos y extranjeros en Italia. Todo explicado en español, paso a paso."
+  canonical="https://grupointegral.it/servicios/partita-iva"
+  keywords="abrir partita IVA extranjero Italia, partita IVA Milano español, asesoría fiscal autónomos Italia latinos, como abrir partita IVA siendo extranjero"
+>
+  <Navbar />
+  <main class="pt-28">
+    <section class="section-padding bg-bg-section">
+      <div class="container-gi max-w-3xl">
+        <nav class="text-xs text-text-body/60 mb-6 flex items-center gap-1.5">
+          <a href="/" class="hover:text-accent transition-colors">Inicio</a><span>›</span>
+          <span>Servicios</span><span>›</span><span>Partita IVA</span>
+        </nav>
+        <Badge class="mb-4">Servicios fiscales · En español</Badge>
+        <h1 class="font-heading font-bold text-primary mb-5" style="font-size:clamp(30px,5vw,44px);line-height:1.1">
+          Partita IVA y Servicios Fiscales
+        </h1>
+        <p class="text-text-body text-lg leading-relaxed mb-4">
+          Trabajar como autónomo en Italia requiere entender un sistema fiscal que puede parecer complejo. En Grupo Integral te lo explicamos en español, paso a paso, para que tomes las decisiones correctas desde el principio.
+        </p>
+        <p class="text-text-body leading-relaxed mb-10">
+          Desde la apertura de tu Partita IVA hasta la gestión fiscal anual, te acompañamos en todo el proceso.
+        </p>
+        <div class="grid sm:grid-cols-2 gap-4 mb-10">
+          {services.map(s => (
+            <div class="bg-white rounded-card border border-border p-5">
+              <h3 class="font-heading font-semibold text-primary text-sm mb-2">{s.title}</h3>
+              <p class="text-text-body text-xs leading-relaxed">{s.desc}</p>
+            </div>
+          ))}
+        </div>
+        <Button href="/#contacto" variant="primary" size="lg">Hablar con un asesor</Button>
+        <p class="text-sm text-text-body/60 mt-3">Primera consulta gratuita. Sin compromiso.</p>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

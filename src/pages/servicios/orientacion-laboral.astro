@@ -1,0 +1,50 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import Badge from '../../components/ui/Badge.astro';
+import Button from '../../components/ui/Button.astro';
+---
+<Layout
+  title="Orientación Laboral en Italia | Grupo Integral"
+  description="Te ayudamos a entender el mercado laboral italiano, revisar tu CV, prepararte para entrevistas y conectarte con oportunidades reales en Lombardía."
+  canonical="https://grupointegral.it/servicios/orientacion-laboral"
+  keywords="orientación laboral inmigrantes Italia, buscar trabajo Lombardía, CV italiano extranjeros, mercado laboral Milano latinos"
+>
+  <Navbar />
+  <main class="pt-28">
+    <section class="section-padding bg-bg-section">
+      <div class="container-gi max-w-3xl">
+        <nav class="text-xs text-text-body/60 mb-6 flex items-center gap-1.5">
+          <a href="/" class="hover:text-accent transition-colors">Inicio</a><span>›</span>
+          <span>Servicios</span><span>›</span><span>Orientación laboral</span>
+        </nav>
+        <Badge class="mb-4">Sesión inicial gratuita</Badge>
+        <h1 class="font-heading font-bold text-primary mb-5" style="font-size:clamp(30px,5vw,44px);line-height:1.1">
+          Orientación Laboral en Italia
+        </h1>
+        <p class="text-text-body text-lg leading-relaxed mb-10">
+          El mercado laboral italiano tiene sus propias reglas, formatos y expectativas. Te ayudamos a entenderlo y a posicionarte de la mejor manera para encontrar trabajo en Lombardía.
+        </p>
+        <div class="space-y-4 mb-10">
+          {[
+            { icon: '📄', title: 'Revisión de CV formato italiano', desc: 'Adaptamos tu currículum al formato Europass y a las expectativas del mercado italiano.' },
+            { icon: '🎯', title: 'Análisis de tu perfil profesional', desc: 'Identificamos tus fortalezas, áreas de mejora y los sectores con más oportunidades para tu perfil.' },
+            { icon: '💬', title: 'Preparación para entrevistas', desc: 'Simulacros de entrevista, preguntas frecuentes en italiano y consejos para causar una buena impresión.' },
+            { icon: '🔗', title: 'Conexión con oportunidades', desc: 'Te conectamos con nuestra red de empresas y entidades en Lombardía que buscan perfiles como el tuyo.' },
+          ].map(item => (
+            <div class="bg-white rounded-card border border-border p-6 flex gap-4">
+              <span class="text-2xl shrink-0">{item.icon}</span>
+              <div>
+                <h3 class="font-heading font-semibold text-primary text-base mb-1">{item.title}</h3>
+                <p class="text-text-body text-sm leading-relaxed">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <Button href="/#contacto" variant="primary" size="lg">Agendar sesión gratuita</Button>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

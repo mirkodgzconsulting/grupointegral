@@ -1,0 +1,55 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import Badge from '../../components/ui/Badge.astro';
+import Button from '../../components/ui/Button.astro';
+
+const services = [
+  { title: 'Renovación de permesso di soggiorno', desc: 'Te acompañamos en todo el proceso de renovación, desde la preparación de documentos hasta la cita en la Questura.' },
+  { title: 'Conversión de permesso', desc: 'De permesso por estudio a trabajo, de turismo a residencia, y otros tipos de conversión según tu situación.' },
+  { title: 'Permesso di soggiorno di lungo periodo', desc: 'Gestión de la carta di soggiorno para personas con más de 5 años de residencia legal en Italia.' },
+  { title: 'Reagrupación familiar', desc: 'Asesoría completa para traer a tu familia a Italia: requisitos, documentación y procedimiento paso a paso.' },
+  { title: 'Ciudadanía italiana', desc: 'Orientación sobre las vías de acceso a la ciudadanía: por residencia, por matrimonio o por descendencia.' },
+  { title: 'Regularización', desc: 'Análisis de tu situación y opciones disponibles para regularizar tu posición en Italia.' },
+];
+---
+<Layout
+  title="Consultoría Migratoria en Milano | Grupo Integral"
+  description="Asesoría migratoria en español en Milán. Renovación y conversión de permesso di soggiorno, reagrupación familiar, ciudadanía italiana. Sesión con especialista."
+  canonical="https://grupointegral.it/servicios/consultoria-migratoria"
+  keywords="renovar permesso di soggiorno Milano, asesoría migratoria Lombardía español, consultoría migratoria Milano latinos, permesso soggiorno ayuda español"
+>
+  <Navbar />
+  <main class="pt-28">
+    <section class="section-padding bg-bg-section">
+      <div class="container-gi max-w-3xl">
+        <nav class="text-xs text-text-body/60 mb-6 flex items-center gap-1.5">
+          <a href="/" class="hover:text-accent transition-colors">Inicio</a><span>›</span>
+          <span>Servicios</span><span>›</span><span>Consultoría migratoria</span>
+        </nav>
+        <Badge class="mb-4">Atención en español · Presencial u online</Badge>
+        <h1 class="font-heading font-bold text-primary mb-5" style="font-size:clamp(30px,5vw,44px);line-height:1.1">
+          Consultoría Migratoria
+        </h1>
+        <p class="text-text-body text-lg leading-relaxed mb-4">
+          Navegar el sistema migratorio italiano puede ser complicado. En Grupo Integral te acompañamos en cada paso con asesoría personalizada en español, para que entiendas exactamente qué hacer y cómo hacerlo.
+        </p>
+        <p class="text-text-body leading-relaxed mb-10">
+          Sesión de 60 minutos con un especialista. Presencial en Milán u online para toda Italia.
+        </p>
+        <div class="grid sm:grid-cols-2 gap-4 mb-10">
+          {services.map(s => (
+            <div class="bg-white rounded-card border border-border p-5">
+              <h3 class="font-heading font-semibold text-primary text-sm mb-2">{s.title}</h3>
+              <p class="text-text-body text-xs leading-relaxed">{s.desc}</p>
+            </div>
+          ))}
+        </div>
+        <Button href="/#contacto" variant="primary" size="lg">Consultar mi caso</Button>
+        <p class="text-sm text-text-body/60 mt-3">Consulta inicial gratuita. Sin compromiso.</p>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

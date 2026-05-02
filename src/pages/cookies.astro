@@ -1,0 +1,61 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+<Layout
+  title="Política de Cookies | Grupo Integral"
+  description="Información sobre las cookies utilizadas en grupointegral.it conforme a la normativa europea y italiana."
+  canonical="https://grupointegral.it/cookies"
+>
+  <Navbar />
+  <main class="pt-28">
+    <section class="section-padding bg-white">
+      <div class="container-gi max-w-3xl">
+        <h1 class="font-heading font-bold text-primary mb-2" style="font-size:clamp(28px,4vw,40px)">Política de Cookies</h1>
+        <p class="text-text-body/60 text-sm mb-10">Última actualización: mayo 2026</p>
+        <div class="space-y-8 text-text-body leading-relaxed">
+          <div>
+            <h2 class="font-heading font-bold text-primary text-xl mb-3">¿Qué son las cookies?</h2>
+            <p>Las cookies son pequeños archivos de texto que se almacenan en tu dispositivo cuando visitas un sitio web. Permiten que el sitio recuerde tus preferencias y mejore tu experiencia de navegación.</p>
+          </div>
+          <div>
+            <h2 class="font-heading font-bold text-primary text-xl mb-3">Cookies que utilizamos</h2>
+            <div class="overflow-x-auto">
+              <table class="w-full text-sm border border-border rounded-card overflow-hidden">
+                <thead class="bg-bg-section">
+                  <tr>
+                    <th class="text-left p-3 font-heading font-semibold text-primary border-b border-border">Nombre</th>
+                    <th class="text-left p-3 font-heading font-semibold text-primary border-b border-border">Tipo</th>
+                    <th class="text-left p-3 font-heading font-semibold text-primary border-b border-border">Finalidad</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="border-b border-border">
+                    <td class="p-3">_ga, _gid</td>
+                    <td class="p-3">Analíticas</td>
+                    <td class="p-3">Google Analytics — estadísticas de visitas anónimas</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3">Superchat</td>
+                    <td class="p-3">Funcionales</td>
+                    <td class="p-3">Widget de chat para atención al cliente</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div>
+            <h2 class="font-heading font-bold text-primary text-xl mb-3">Cómo gestionar las cookies</h2>
+            <p>Puedes configurar tu navegador para rechazar o eliminar cookies. Ten en cuenta que desactivar ciertas cookies puede afectar al funcionamiento del sitio. Consulta la ayuda de tu navegador para más información.</p>
+          </div>
+          <div>
+            <h2 class="font-heading font-bold text-primary text-xl mb-3">Más información</h2>
+            <p>Para cualquier consulta sobre nuestra política de cookies escríbenos a <a href="mailto:info@grupointegral.it" class="text-accent hover:underline">info@grupointegral.it</a>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

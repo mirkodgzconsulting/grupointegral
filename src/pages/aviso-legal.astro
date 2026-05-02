@@ -1,0 +1,43 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+<Layout
+  title="Aviso Legal | Grupo Integral"
+  description="Aviso legal y condiciones de uso del sitio web grupointegral.it"
+  canonical="https://grupointegral.it/aviso-legal"
+>
+  <Navbar />
+  <main class="pt-28">
+    <section class="section-padding bg-white">
+      <div class="container-gi max-w-3xl">
+        <h1 class="font-heading font-bold text-primary mb-2" style="font-size:clamp(28px,4vw,40px)">Aviso Legal</h1>
+        <p class="text-text-body/60 text-sm mb-10">Última actualización: mayo 2026</p>
+        <div class="space-y-8 text-text-body leading-relaxed">
+          <div>
+            <h2 class="font-heading font-bold text-primary text-xl mb-3">Titular del sitio web</h2>
+            <p>Grupo Integral<br/>Domicilio: Lombardía, Italia<br/>Email: <a href="mailto:info@grupointegral.it" class="text-accent hover:underline">info@grupointegral.it</a><br/>P.IVA: [completar]</p>
+          </div>
+          <div>
+            <h2 class="font-heading font-bold text-primary text-xl mb-3">Condiciones de uso</h2>
+            <p>El acceso y uso de este sitio web implica la aceptación de las presentes condiciones. El contenido de este sitio tiene carácter informativo y no constituye asesoramiento legal vinculante.</p>
+          </div>
+          <div>
+            <h2 class="font-heading font-bold text-primary text-xl mb-3">Propiedad intelectual</h2>
+            <p>Todos los contenidos de este sitio web (textos, imágenes, diseño) son propiedad de Grupo Integral o de sus respectivos titulares. Queda prohibida su reproducción sin autorización expresa.</p>
+          </div>
+          <div>
+            <h2 class="font-heading font-bold text-primary text-xl mb-3">Limitación de responsabilidad</h2>
+            <p>Grupo Integral no se responsabiliza de los daños derivados del uso de la información contenida en este sitio. Los servicios descritos están sujetos a condiciones específicas acordadas individualmente con cada cliente.</p>
+          </div>
+          <div>
+            <h2 class="font-heading font-bold text-primary text-xl mb-3">Legislación aplicable</h2>
+            <p>Este aviso legal se rige por la legislación italiana. Para cualquier controversia serán competentes los tribunales de Milán.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
