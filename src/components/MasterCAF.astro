@@ -1,0 +1,114 @@
+---
+import Button from './ui/Button.astro';
+import Badge from './ui/Badge.astro';
+
+const learnings = [
+  'Fiscalidad italiana básica y avanzada',
+  'Declaración de renta (730, ISEE, Unico)',
+  'Gestión de bonificaciones y subsidios del Estado',
+  'Uso de software fiscal profesional',
+  'Atención al ciudadano en contexto fiscal',
+  'Normativa vigente actualizada',
+];
+
+const pills = [
+  'Alta demanda laboral en toda Italia',
+  'Trabaja en cualquier CAF del país',
+  'Certificación reconocida',
+  'Mejores oportunidades salariales',
+];
+---
+
+<section class="section-padding bg-bg-section" id="formacion">
+  <div class="container-gi">
+    <div class="grid lg:grid-cols-2 gap-14 items-start">
+
+      <!-- Left: info -->
+      <div>
+        <Badge variant="accent" class="mb-4">Formación acreditada · Próximo inicio: 27 de junio</Badge>
+
+        <h2 class="font-heading font-bold text-primary text-h2 mb-4">
+          Conviértete en Operador Fiscal en Italia
+        </h2>
+
+        <p class="text-text-body leading-relaxed mb-4">
+          El curso MasterCAF te prepara para trabajar en centros de asistencia fiscal (CAF) en Italia — uno de los sectores con mayor demanda laboral para personas con perfil administrativo.
+        </p>
+        <p class="text-text-body leading-relaxed mb-8">
+          Italia cuenta con miles de CAF distribuidos por todo el país que necesitan operadores capacitados para atender a la ciudadanía en declaraciones de renta, bonificaciones, subsidios y trámites fiscales. Con la formación correcta, puedes acceder a este mercado laboral con estabilidad real.
+        </p>
+
+        <!-- What you'll learn -->
+        <h3 class="font-heading font-semibold text-primary text-base mb-3">Lo que aprenderás:</h3>
+        <ul class="space-y-2 mb-8">
+          {learnings.map(item => (
+            <li class="flex items-start gap-2.5 text-text-body text-sm">
+              <svg class="w-4 h-4 text-success mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/>
+              </svg>
+              {item}
+            </li>
+          ))}
+        </ul>
+
+        <!-- Benefit pills -->
+        <div class="flex flex-wrap gap-2">
+          {pills.map(pill => (
+            <span class="inline-flex items-center gap-1.5 bg-white border border-success/30 text-success text-xs font-semibold px-3 py-1.5 rounded-full">
+              <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/>
+              </svg>
+              {pill}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      <!-- Right: pricing card -->
+      <div class="lg:sticky lg:top-24">
+        <div class="bg-white rounded-card border border-border shadow-lg p-8">
+          <p class="text-xs font-heading font-semibold uppercase tracking-wider text-accent mb-4">Precio especial de lanzamiento</p>
+
+          <div class="flex items-end gap-3 mb-2">
+            <span class="font-heading font-bold text-primary" style="font-size:48px;line-height:1">1.000 €</span>
+          </div>
+          <p class="text-text-body text-sm mb-1">
+            <s class="text-text-body/60 mr-1">Precio regular: 1.300 €</s>
+          </p>
+          <p class="text-success text-sm font-semibold mb-6">Ahorras 300 € en el precio de lanzamiento</p>
+
+          <div class="bg-bg-section rounded-lg p-4 mb-6 space-y-2">
+            <div class="flex items-center gap-2 text-sm text-text-body">
+              <svg class="w-4 h-4 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"/>
+              </svg>
+              <strong class="text-primary">Inicio:</strong> 27 de junio
+            </div>
+            <div class="flex items-center gap-2 text-sm text-amber-600 font-medium">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/>
+              </svg>
+              Cupos muy limitados
+            </div>
+          </div>
+
+          <Button href="/#contacto" variant="primary" size="lg" class="w-full justify-center mb-3">
+            Reservar mi plaza ahora
+          </Button>
+          <Button href="/#contacto" variant="ghost" class="w-full justify-center text-sm">
+            Solicitar más información primero →
+          </Button>
+
+          <!-- Guarantee -->
+          <div class="mt-5 pt-5 border-t border-border flex gap-2 text-xs text-text-body/70">
+            <svg class="w-4 h-4 text-success shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/>
+            </svg>
+            <span>Si en los primeros 7 días el curso no cumple tus expectativas, te devolvemos el importe. Sin preguntas.</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

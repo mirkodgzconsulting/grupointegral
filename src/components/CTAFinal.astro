@@ -1,0 +1,32 @@
+---
+import Button from './ui/Button.astro';
+---
+
+<section class="section-padding bg-primary relative overflow-hidden">
+  <!-- Background decoration -->
+  <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+    <div class="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-accent/10 blur-3xl"></div>
+    <div class="absolute -bottom-32 -left-32 w-80 h-80 rounded-full bg-accent/10 blur-3xl"></div>
+  </div>
+
+  <div class="container-gi relative text-center">
+    <h2 class="font-heading font-bold text-white mb-5" style="font-size:clamp(28px,4vw,40px);line-height:1.15">
+      Da el primer paso hoy
+    </h2>
+    <p class="text-white/75 text-lg leading-relaxed max-w-2xl mx-auto mb-8">
+      Construir una vida estable en Italia es posible. Miles de personas de la comunidad latina lo han logrado con orientación correcta y los servicios adecuados. En Grupo Integral te acompañamos en ese camino — paso a paso, en tu idioma, sin dejarte solo.
+    </p>
+
+    <Button href="/#contacto" variant="primary" size="lg" class="shadow-lg">
+      Solicitar información ahora — es gratis
+    </Button>
+
+    <p class="text-white/50 text-sm mt-4 flex items-center justify-center gap-3">
+      <span>Sin compromiso</span>
+      <span class="w-1 h-1 bg-white/30 rounded-full"></span>
+      <span>Sin costos ocultos</span>
+      <span class="w-1 h-1 bg-white/30 rounded-full"></span>
+      <span>Respuesta en menos de 24h</span>
+    </p>
+  </div>
+</section>

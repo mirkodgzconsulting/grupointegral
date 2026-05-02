@@ -1,0 +1,93 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import Badge from '../components/ui/Badge.astro';
+import Button from '../components/ui/Button.astro';
+---
+
+<Layout
+  title="Quiénes Somos | Grupo Integral Italia"
+  description="Conoce el equipo y la misión detrás de Grupo Integral, la plataforma de servicios para la comunidad latina en Italia."
+  canonical="https://grupointegral.it/sobre-nosotros"
+>
+  <Navbar />
+  <main class="pt-28">
+
+    <!-- Hero -->
+    <section class="section-padding bg-bg-section">
+      <div class="container-gi max-w-3xl">
+        <nav class="text-xs text-text-body/60 mb-6 flex items-center gap-1.5">
+          <a href="/" class="hover:text-accent transition-colors">Inicio</a>
+          <span>›</span>
+          <span>Sobre nosotros</span>
+        </nav>
+
+        <Badge class="mb-4">Nuestra historia</Badge>
+        <h1 class="font-heading font-bold text-primary mb-6" style="font-size:clamp(32px,5vw,48px);line-height:1.1">
+          Nacimos de una necesidad real
+        </h1>
+
+        <div class="space-y-5 text-text-body leading-relaxed text-lg">
+          <p>
+            Grupo Integral nació de una necesidad real: la de tener un punto de referencia confiable en Italia para la comunidad latina. Un lugar donde poder preguntar sin miedo, entender los trámites sin tener que leerlos cinco veces, y acceder a servicios de calidad sin pagar de más por no saber a quién acudir.
+          </p>
+          <p>
+            Somos un equipo con experiencia directa en el sistema italiano — muchos de nosotros hemos pasado por los mismos procesos que ahora ayudamos a gestionar. Eso nos da una perspectiva diferente: sabemos lo que se siente y sabemos cómo resolverlo.
+          </p>
+          <p>
+            Hoy trabajamos con una red de aliados acreditados para ofrecer un ecosistema completo de servicios — desde la regularización migratoria hasta la apertura de un negocio propio — todo en español, todo con acompañamiento real.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key numbers -->
+    <section class="section-padding-sm bg-white">
+      <div class="container-gi">
+        <div class="grid sm:grid-cols-3 gap-6 max-w-2xl mx-auto text-center">
+          {[
+            { number: '+500', label: 'Personas atendidas' },
+            { number: '3+', label: 'Aliados estratégicos' },
+            { number: '100%', label: 'Atención en español' },
+          ].map(stat => (
+            <div class="bg-bg-section rounded-card border border-border p-6">
+              <p class="font-heading font-bold text-accent text-3xl mb-1">{stat.number}</p>
+              <p class="text-text-body text-sm">{stat.label}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Values -->
+    <section class="section-padding bg-bg-section">
+      <div class="container-gi max-w-3xl">
+        <h2 class="font-heading font-bold text-primary text-h2 mb-8">Nuestros valores</h2>
+        <div class="grid sm:grid-cols-3 gap-6">
+          {[
+            { title: 'Transparencia', desc: 'Te decimos exactamente qué puedes esperar, sin promesas vacías ni costos ocultos.' },
+            { title: 'Cercanía', desc: 'Atención personalizada en español, con personas reales que conocen el sistema italiano.' },
+            { title: 'Resultados', desc: 'Cada servicio que ofrecemos tiene un propósito claro: mejorar tu situación concreta en Italia.' },
+          ].map(v => (
+            <div class="bg-white rounded-card border border-border p-6">
+              <h3 class="font-heading font-semibold text-primary text-base mb-2">{v.title}</h3>
+              <p class="text-text-body text-sm leading-relaxed">{v.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section-padding-sm bg-white">
+      <div class="container-gi text-center">
+        <h2 class="font-heading font-bold text-primary text-h2 mb-4">¿Listo para empezar?</h2>
+        <p class="text-text-body mb-6">Contáctanos y un asesor te orientará en menos de 24 horas.</p>
+        <Button href="/#contacto" variant="primary" size="lg">Solicitar consulta gratuita</Button>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</Layout>

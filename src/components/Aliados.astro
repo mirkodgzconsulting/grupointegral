@@ -1,0 +1,64 @@
+---
+import Badge from './ui/Badge.astro';
+import Button from './ui/Button.astro';
+
+const partners = [
+  {
+    name: 'ANAS Milano',
+    desc: 'Associazione Nazionale oltre le frontiere — una de las organizaciones de referencia para la comunidad latina en Milán. Servicios migratorios y sociales con décadas de experiencia en el territorio lombardo.',
+    initial: 'A',
+    color: 'bg-blue-50 text-blue-700 border-blue-200',
+  },
+  {
+    name: 'Soporte Integrado',
+    desc: 'Organización especializada en acompañamiento integral a personas inmigrantes en Italia. Asesoría legal, social y laboral para casos complejos.',
+    initial: 'S',
+    color: 'bg-purple-50 text-purple-700 border-purple-200',
+  },
+  {
+    name: 'Milano Studio Migratorio',
+    desc: 'Centro especializado en servicios migratorios y documentación para extranjeros residentes en la zona metropolitana de Milán.',
+    initial: 'M',
+    color: 'bg-emerald-50 text-emerald-700 border-emerald-200',
+  },
+];
+---
+
+<section class="section-padding bg-white" id="aliados">
+  <div class="container-gi">
+    <div class="text-center max-w-2xl mx-auto mb-14">
+      <Badge class="mb-4">Nuestra red</Badge>
+      <h2 class="font-heading font-bold text-primary text-h2 mb-3">
+        Trabajamos con entidades acreditadas
+      </h2>
+      <p class="text-text-body leading-relaxed">
+        Grupo Integral no trabaja solo. Hemos construido una red de aliados estratégicos reconocidos en Italia para garantizarte servicios de calidad verificada.
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-3 gap-6 mb-14">
+      {partners.map((p) => (
+        <div class="bg-bg-section rounded-card border border-border p-6 text-center">
+          <div class={`w-14 h-14 rounded-2xl border-2 flex items-center justify-center mx-auto mb-4 font-heading font-bold text-xl ${p.color}`}>
+            {p.initial}
+          </div>
+          <h3 class="font-heading font-semibold text-primary text-base mb-3">{p.name}</h3>
+          <p class="text-text-body text-sm leading-relaxed">{p.desc}</p>
+        </div>
+      ))}
+    </div>
+
+    <!-- B2B CTA -->
+    <div class="bg-bg-accent rounded-2xl border border-accent/20 p-8 md:p-10 text-center max-w-2xl mx-auto">
+      <h3 class="font-heading font-bold text-primary text-h3 mb-2">
+        ¿Tu empresa quiere llegar a más clientes?
+      </h3>
+      <p class="text-text-body text-sm leading-relaxed mb-6">
+        Si tu empresa ofrece servicios relevantes para la comunidad latina en Italia, Grupo Integral puede ser tu mejor canal de adquisición de clientes.
+      </p>
+      <Button href="/aliados" variant="outline">
+        Ser aliado estratégico →
+      </Button>
+    </div>
+  </div>
+</section>

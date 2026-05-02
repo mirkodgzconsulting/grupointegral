@@ -1,0 +1,210 @@
+---
+import Badge from './ui/Badge.astro';
+
+const testimonials = [
+  {
+    quote: 'Llegué a Italia sin saber por dónde empezar con mi permesso di soggiorno. Grupo Integral me explicó todo en español, me acompañaron en cada paso y en tres semanas tenía todo resuelto. No sé qué hubiera hecho sin ellos.',
+    name: 'María L.',
+    origin: 'Colombia',
+    city: 'Milán',
+    service: 'Consultoría migratoria',
+    initial: 'M',
+    color: 'bg-violet-100 text-violet-700',
+  },
+  {
+    quote: 'Hice el curso MasterCAF y fue la mejor inversión que pude hacer desde que llegué a Italia. A los dos meses de terminar ya estaba trabajando en un CAF en Sesto San Giovanni. El contenido es muy completo y los profesores explican muy bien.',
+    name: 'Carlos M.',
+    origin: 'Venezuela',
+    city: 'Milano Area',
+    service: 'Curso MasterCAF',
+    initial: 'C',
+    color: 'bg-blue-100 text-blue-700',
+  },
+  {
+    quote: 'No sabía que podía estudiar gratis hasta que Grupo Integral me explicó el Programa GOL. Cumplía todos los requisitos y ellos me ayudaron a inscribirme sin complicaciones. Ahora estoy terminando mi curso de operadora administrativa.',
+    name: 'Lucia P.',
+    origin: 'Ecuador',
+    city: 'Brescia',
+    service: 'Programa GOL',
+    initial: 'L',
+    color: 'bg-emerald-100 text-emerald-700',
+  },
+  {
+    quote: 'Quería abrir mi propio negocio pero no sabía por dónde empezar con la Partita IVA. En Grupo Integral me explicaron todo en español, paso a paso. Ahora tengo mi negocio funcionando y me siento mucho más segura.',
+    name: 'Valentina R.',
+    origin: 'Argentina',
+    city: 'Bergamo',
+    service: 'Partita IVA',
+    initial: 'V',
+    color: 'bg-rose-100 text-rose-700',
+  },
+  {
+    quote: 'El test de italiano A2 era un requisito para mi permesso di soggiorno de largo periodo. Me ayudaron a prepararme y a inscribirme. Lo aprobé al primer intento. El trato es muy humano y profesional.',
+    name: 'Jorge A.',
+    origin: 'Perú',
+    city: 'Monza',
+    service: 'Test de italiano',
+    initial: 'J',
+    color: 'bg-amber-100 text-amber-700',
+  },
+  {
+    quote: 'Llevaba meses intentando renovar mi permesso sin éxito. Un amigo me recomendó Grupo Integral y en menos de dos semanas tenía todo listo. Son súper eficientes y siempre disponibles para responder dudas por WhatsApp.',
+    name: 'Andrea M.',
+    origin: 'Bolivia',
+    city: 'Como',
+    service: 'Consultoría migratoria',
+    initial: 'A',
+    color: 'bg-teal-100 text-teal-700',
+  },
+  {
+    quote: 'Necesitaba un business plan para presentar a un banco. El equipo de Grupo Integral lo preparó de manera muy profesional, con proyecciones financieras reales. El banco aprobó mi solicitud sin problemas.',
+    name: 'Roberto C.',
+    origin: 'México',
+    city: 'Milán',
+    service: 'Business Plan',
+    initial: 'R',
+    color: 'bg-indigo-100 text-indigo-700',
+  },
+];
+---
+
+<section class="section-padding bg-bg-section overflow-hidden">
+  <div class="container-gi">
+    <div class="flex items-end justify-between mb-14 flex-wrap gap-4">
+      <div>
+        <Badge class="mb-4">Lo que dicen nuestros clientes</Badge>
+        <h2 class="font-heading font-bold text-primary text-h2">
+          Personas reales, resultados reales
+        </h2>
+      </div>
+      <!-- Nav arrows desktop -->
+      <div class="flex gap-2 shrink-0">
+        <button id="prev-btn" aria-label="Anterior"
+          class="w-10 h-10 rounded-full border border-border bg-white hover:border-accent hover:text-accent text-primary transition-colors flex items-center justify-center">
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/>
+          </svg>
+        </button>
+        <button id="next-btn" aria-label="Siguiente"
+          class="w-10 h-10 rounded-full border border-border bg-white hover:border-accent hover:text-accent text-primary transition-colors flex items-center justify-center">
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Carousel track -->
+    <div class="relative">
+      <div id="carousel-track" class="flex gap-6 transition-transform duration-500 ease-in-out will-change-transform">
+        {testimonials.map((t) => (
+          <div class="bg-white rounded-card border border-border shadow-card p-7 flex flex-col shrink-0 w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
+            <div class="flex gap-0.5 mb-4">
+              {[...Array(5)].map(() => (
+                <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                </svg>
+              ))}
+            </div>
+
+            <blockquote class="text-text-body text-sm leading-relaxed flex-1 mb-5 italic">
+              "{t.quote}"
+            </blockquote>
+
+            <div class="flex items-center gap-3 pt-4 border-t border-border">
+              <div class={`w-9 h-9 rounded-full flex items-center justify-center font-heading font-bold text-sm shrink-0 ${t.color}`}>
+                {t.initial}
+              </div>
+              <div>
+                <p class="font-heading font-semibold text-primary text-sm">{t.name}</p>
+                <p class="text-text-body/60 text-xs">{t.origin} · {t.city}</p>
+              </div>
+              <span class="ml-auto text-xs bg-bg-accent text-accent font-semibold px-2 py-1 rounded-full whitespace-nowrap">
+                {t.service}
+              </span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Dots -->
+    <div id="dots" class="flex justify-center gap-2 mt-8"></div>
+  </div>
+</section>
+
+<script>
+  const track    = document.getElementById('carousel-track') as HTMLElement;
+  const prevBtn  = document.getElementById('prev-btn') as HTMLButtonElement;
+  const nextBtn  = document.getElementById('next-btn') as HTMLButtonElement;
+  const dotsEl   = document.getElementById('dots') as HTMLElement;
+  const cards    = track.children;
+
+  let current = 0;
+  let perView = 3;
+  let autoTimer: ReturnType<typeof setInterval>;
+
+  function getPerView() {
+    if (window.innerWidth < 640) return 1;
+    if (window.innerWidth < 1024) return 2;
+    return 3;
+  }
+
+  function totalSlides() {
+    return Math.ceil(cards.length / perView);
+  }
+
+  function buildDots() {
+    dotsEl.innerHTML = '';
+    for (let i = 0; i < totalSlides(); i++) {
+      const dot = document.createElement('button');
+      dot.className = `w-2 h-2 rounded-full transition-all duration-300 ${i === current ? 'bg-accent w-5' : 'bg-border hover:bg-accent/40'}`;
+      dot.setAttribute('aria-label', `Página ${i + 1}`);
+      dot.addEventListener('click', () => goTo(i));
+      dotsEl.appendChild(dot);
+    }
+  }
+
+  function updateDots() {
+    Array.from(dotsEl.children).forEach((dot, i) => {
+      (dot as HTMLElement).className = `w-2 h-2 rounded-full transition-all duration-300 ${i === current ? 'bg-accent w-5' : 'bg-border hover:bg-accent/40'}`;
+    });
+  }
+
+  function goTo(index: number) {
+    current = Math.max(0, Math.min(index, totalSlides() - 1));
+    const cardWidth = (cards[0] as HTMLElement).offsetWidth;
+    const gap = 24;
+    track.style.transform = `translateX(-${current * perView * (cardWidth + gap)}px)`;
+    updateDots();
+  }
+
+  function setup() {
+    perView = getPerView();
+    current = 0;
+    track.style.transform = 'translateX(0)';
+    buildDots();
+  }
+
+  prevBtn.addEventListener('click', () => { goTo(current - 1); resetAuto(); });
+  nextBtn.addEventListener('click', () => { goTo(current + 1); resetAuto(); });
+
+  // Touch/swipe
+  let startX = 0;
+  track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+  track.addEventListener('touchend', e => {
+    const diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) { diff > 0 ? goTo(current + 1) : goTo(current - 1); resetAuto(); }
+  });
+
+  function resetAuto() {
+    clearInterval(autoTimer);
+    autoTimer = setInterval(() => {
+      goTo(current + 1 >= totalSlides() ? 0 : current + 1);
+    }, 5000);
+  }
+
+  window.addEventListener('resize', setup);
+  setup();
+  resetAuto();
+</script>

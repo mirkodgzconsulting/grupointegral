@@ -1,0 +1,63 @@
+---
+import Badge from './ui/Badge.astro';
+
+const values = [
+  {
+    title: 'Transparencia',
+    desc: 'Te decimos exactamente qué puedes esperar, sin promesas vacías ni costos ocultos.',
+    icon: '◎',
+  },
+  {
+    title: 'Cercanía',
+    desc: 'Atención personalizada en español, con personas reales que conocen el sistema italiano.',
+    icon: '◑',
+  },
+  {
+    title: 'Resultados',
+    desc: 'Cada servicio que ofrecemos tiene un propósito claro: mejorar tu situación concreta en Italia.',
+    icon: '◈',
+  },
+];
+---
+
+<section class="section-padding bg-bg-section" id="quienes-somos">
+  <div class="container-gi">
+    <div class="grid lg:grid-cols-2 gap-14 items-center">
+
+      <!-- Left: copy -->
+      <div>
+        <Badge class="mb-4">Quiénes somos</Badge>
+        <h2 class="font-heading font-bold text-primary text-h2 mb-5">
+          Nacimos para hacer más fácil tu vida en Italia
+        </h2>
+        <div class="space-y-4 text-text-body leading-relaxed">
+          <p>
+            Grupo Integral es una plataforma especializada en conectar a la comunidad latina en Italia con los servicios que realmente necesita. Sabemos lo difícil que puede ser navegar el sistema italiano solo: los formularios, los plazos, el idioma, la burocracia. Por eso existimos.
+          </p>
+          <p>
+            Trabajamos con una red de aliados estratégicos acreditados — entre ellos ANAS Milano, Soporte Integrado y Milano Studio Migratorio — para ofrecerte soluciones reales, verificadas y con acompañamiento en español.
+          </p>
+          <p>
+            No somos una agencia más. Somos tu punto de referencia en Italia: un lugar donde encontrarás orientación honesta, servicios confiables y personas que entienden tu situación porque han vivido algo similar.
+          </p>
+        </div>
+      </div>
+
+      <!-- Right: value cards -->
+      <div class="grid gap-4">
+        {values.map((v) => (
+          <div class="bg-white rounded-card border border-border shadow-card p-6 flex gap-4 items-start">
+            <div class="w-10 h-10 rounded-lg bg-bg-accent flex items-center justify-center shrink-0 text-accent text-xl">
+              {v.icon}
+            </div>
+            <div>
+              <h3 class="font-heading font-semibold text-primary text-base mb-1">{v.title}</h3>
+              <p class="text-text-body text-sm leading-relaxed">{v.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </div>
+</section>

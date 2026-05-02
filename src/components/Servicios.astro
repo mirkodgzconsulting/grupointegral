@@ -1,0 +1,87 @@
+---
+import Badge from './ui/Badge.astro';
+
+const services = [
+  {
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/>`,
+    title: 'Test oficial de italiano',
+    desc: 'Exámenes A2 y B1 reconocidos por el Ministerio del Interior italiano, válidos para solicitar la ciudadanía y el permesso di soggiorno de largo periodo.',
+    detail: 'Disponibles todos los sábados. Grupos reducidos. Preparación incluida.',
+    cta: 'Reservar mi examen',
+    href: '/#contacto',
+  },
+  {
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/>`,
+    title: 'Consultoría migratoria',
+    desc: 'Te ayudamos con la regularización, renovación y conversión de tu permesso di soggiorno. También asesoría para reagrupación familiar y ciudadanía.',
+    detail: 'Sesión de 60 minutos con un especialista. Presencial u online.',
+    cta: 'Consultar mi caso',
+    href: '/#contacto',
+  },
+  {
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z"/>`,
+    title: 'Partita IVA y servicios fiscales',
+    desc: 'Apertura y cierre de Partita IVA, declaración de renta, asesoría fiscal básica para autónomos y trabajadores por cuenta propia en Italia.',
+    detail: 'Explicamos todo en español, paso a paso.',
+    cta: 'Hablar con un asesor',
+    href: '/#contacto',
+  },
+  {
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/>`,
+    title: 'Quiero emprender en Italia',
+    desc: 'Te ayudamos a evaluar tu idea, estructurar tu modelo de negocio y dar los primeros pasos legales para emprender correctamente en Italia.',
+    detail: 'Ideal para quienes quieren abrir un negocio propio siendo extranjeros.',
+    cta: 'Explorar opciones',
+    href: '/#contacto',
+  },
+  {
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"/>`,
+    title: 'Business Plan profesional',
+    desc: 'Elaboramos tu plan de negocio con proyecciones financieras, análisis de mercado y estructura estratégica — listo para presentar a bancos o inversores.',
+    detail: 'Entrega en 7-10 días hábiles. Incluye revisión y ajustes.',
+    cta: 'Solicitar presupuesto',
+    href: '/#contacto',
+  },
+  {
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"/>`,
+    title: 'Orientación laboral',
+    desc: 'Te ayudamos a entender el mercado laboral italiano, revisar tu CV, prepararte para entrevistas y conectarte con oportunidades reales en Lombardía.',
+    detail: 'Sesión gratuita de orientación inicial.',
+    cta: 'Agendar sesión',
+    href: '/#contacto',
+  },
+];
+---
+
+<section class="section-padding bg-bg-section" id="servicios">
+  <div class="container-gi">
+    <div class="text-center max-w-2xl mx-auto mb-14">
+      <Badge class="mb-4">Nuestros servicios</Badge>
+      <h2 class="font-heading font-bold text-primary text-h2 mb-3">
+        Soluciones completas para tu vida en Italia
+      </h2>
+      <p class="text-text-body leading-relaxed">
+        Más allá de la formación, te acompañamos en todos los trámites y decisiones importantes para que tu proyecto de vida en Italia avance con seguridad.
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {services.map((s) => (
+        <div class="bg-white rounded-card border border-border shadow-card hover:shadow-md hover:border-accent/30 transition-all duration-200 p-6 flex flex-col">
+          <div class="w-11 h-11 rounded-xl bg-bg-accent flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" set:html={s.icon} />
+          </div>
+          <h3 class="font-heading font-semibold text-primary text-base mb-2">{s.title}</h3>
+          <p class="text-text-body text-sm leading-relaxed mb-3 flex-1">{s.desc}</p>
+          <p class="text-text-body/60 text-xs mb-4 italic">{s.detail}</p>
+          <a href={s.href} class="text-accent font-heading font-semibold text-sm hover:text-[#5248e8] transition-colors inline-flex items-center gap-1">
+            {s.cta}
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
+            </svg>
+          </a>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

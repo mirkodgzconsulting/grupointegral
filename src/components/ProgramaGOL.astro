@@ -1,0 +1,75 @@
+---
+import Button from './ui/Button.astro';
+import Badge from './ui/Badge.astro';
+
+const requirements = [
+  'Permesso di soggiorno vigente',
+  'Tessera sanitaria activa',
+  'Documento de identidad válido',
+  'Residencia en Lombardía',
+  'Situación de desempleo o búsqueda activa de trabajo',
+];
+
+const courses = [
+  'Operador administrativo',
+  'Asistente a la persona (badante)',
+  'Operador logístico',
+  'Auxiliar de cocina y restauración',
+  'Competencias digitales básicas',
+];
+---
+
+<section class="section-padding bg-white">
+  <div class="container-gi">
+    <div class="grid lg:grid-cols-2 gap-14 items-center">
+
+      <!-- Left: visual card -->
+      <div class="order-2 lg:order-1">
+        <div class="bg-gradient-to-br from-bg-accent to-white rounded-2xl border border-accent/20 p-8">
+          <p class="text-xs font-heading font-semibold uppercase tracking-wider text-accent mb-5">Requisitos para acceder</p>
+          <ul class="space-y-3 mb-8">
+            {requirements.map(req => (
+              <li class="flex items-start gap-3">
+                <div class="w-5 h-5 rounded-full bg-success/15 flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-3 h-3 text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/>
+                  </svg>
+                </div>
+                <span class="text-text-body text-sm leading-snug">{req}</span>
+              </li>
+            ))}
+          </ul>
+
+          <p class="text-xs font-heading font-semibold uppercase tracking-wider text-primary/60 mb-3">Cursos disponibles</p>
+          <div class="flex flex-wrap gap-2">
+            {courses.map(course => (
+              <span class="bg-white border border-border text-text-body text-xs px-3 py-1.5 rounded-full font-medium">{course}</span>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: copy -->
+      <div class="order-1 lg:order-2">
+        <Badge variant="success" class="mb-4">Programa GOL · Región Lombardía</Badge>
+
+        <h2 class="font-heading font-bold text-primary text-h2 mb-4">
+          ¿Sabías que puedes estudiar gratis en Italia?
+        </h2>
+
+        <p class="text-text-body leading-relaxed mb-4">
+          Si resides en Lombardía, tienes tus documentos en regla y estás buscando trabajo, puedes acceder a formación completamente gratuita a través del Programa GOL — una iniciativa oficial de la Región Lombardía.
+        </p>
+        <p class="text-text-body leading-relaxed mb-8">
+          El Programa GOL (Garanzia di Occupabilità dei Lavoratori) ofrece cursos de formación profesional gratuitos para personas en situación de desempleo, financiados con fondos europeos. En Grupo Integral te ayudamos a verificar si cumples los requisitos, inscribirte correctamente y elegir el curso que mejor se adapta a tu perfil.
+        </p>
+
+        <Button href="/#contacto" variant="primary" size="lg">
+          Verificar si cumplo los requisitos
+        </Button>
+        <p class="text-sm text-text-body/60 mt-3">Consulta gratuita y sin compromiso. Te respondemos en 24 horas.</p>
+      </div>
+
+    </div>
+  </div>
+</section>

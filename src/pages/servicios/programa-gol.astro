@@ -1,0 +1,98 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import Badge from '../../components/ui/Badge.astro';
+import Button from '../../components/ui/Button.astro';
+
+const requirements = [
+  'Permesso di soggiorno vigente',
+  'Tessera sanitaria activa',
+  'Documento de identidad válido',
+  'Residencia en Lombardía',
+  'Situación de desempleo o búsqueda activa de trabajo',
+];
+
+const courses = [
+  { title: 'Operador administrativo', desc: 'Gestión de documentos, comunicaciones y tareas administrativas en empresas e instituciones.' },
+  { title: 'Asistente a la persona (badante)', desc: 'Cuidado de personas mayores o con necesidades especiales. Alta demanda en todo el territorio.' },
+  { title: 'Operador logístico', desc: 'Gestión de almacén, preparación de pedidos y transporte de mercancías.' },
+  { title: 'Auxiliar de cocina y restauración', desc: 'Preparación y servicio en cocinas profesionales, restaurantes y colectividades.' },
+  { title: 'Competencias digitales básicas', desc: 'Uso de herramientas digitales, internet, email y ofimática para el trabajo moderno.' },
+];
+---
+
+<Layout
+  title="Programa GOL Lombardía | Formación Gratuita para Inmigrantes"
+  description="Accede a formación profesional gratuita en Lombardía con el Programa GOL. Requisitos, cursos disponibles y cómo inscribirte."
+  canonical="https://grupointegral.it/servicios/programa-gol"
+  keywords="programa GOL Lombardía, formación gratuita inmigrantes Italia, cursos gratis Lombardía 2026, GOL Regione Lombardia como acceder"
+>
+  <Navbar />
+  <main class="pt-28">
+
+    <!-- Hero -->
+    <section class="section-padding bg-bg-section">
+      <div class="container-gi max-w-3xl">
+        <nav class="text-xs text-text-body/60 mb-6 flex items-center gap-1.5">
+          <a href="/" class="hover:text-accent transition-colors">Inicio</a>
+          <span>›</span>
+          <span>Servicios</span>
+          <span>›</span>
+          <span>Programa GOL</span>
+        </nav>
+
+        <Badge variant="success" class="mb-4">Formación 100% gratuita · Región Lombardía</Badge>
+        <h1 class="font-heading font-bold text-primary mb-5" style="font-size:clamp(30px,5vw,44px);line-height:1.1">
+          Programa GOL — Estudia Gratis en Lombardía
+        </h1>
+        <p class="text-text-body text-lg leading-relaxed mb-4">
+          El Programa GOL (Garanzia di Occupabilità dei Lavoratori) ofrece formación profesional completamente gratuita para personas en situación de desempleo residentes en Lombardía, financiada con fondos europeos.
+        </p>
+        <p class="text-text-body leading-relaxed mb-8">
+          En Grupo Integral te ayudamos a verificar si cumples los requisitos, a inscribirte correctamente y a elegir el curso que mejor se adapta a tu perfil y objetivos.
+        </p>
+        <Button href="/#contacto" variant="primary" size="lg">
+          Verificar si cumplo los requisitos — gratis
+        </Button>
+      </div>
+    </section>
+
+    <!-- Requirements -->
+    <section class="section-padding bg-white">
+      <div class="container-gi max-w-3xl">
+        <h2 class="font-heading font-bold text-primary text-h2 mb-6">Requisitos para acceder</h2>
+        <ul class="space-y-3 mb-10">
+          {requirements.map(req => (
+            <li class="flex items-start gap-3 p-4 bg-bg-section rounded-card border border-border">
+              <div class="w-6 h-6 rounded-full bg-success/15 flex items-center justify-center shrink-0 mt-0.5">
+                <svg class="w-3.5 h-3.5 text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/>
+                </svg>
+              </div>
+              <span class="text-text-body text-sm leading-snug">{req}</span>
+            </li>
+          ))}
+        </ul>
+
+        <h2 class="font-heading font-bold text-primary text-h2 mb-6">Cursos disponibles</h2>
+        <div class="space-y-4 mb-10">
+          {courses.map(c => (
+            <div class="p-5 bg-bg-section rounded-card border border-border">
+              <h3 class="font-heading font-semibold text-primary text-base mb-1">{c.title}</h3>
+              <p class="text-text-body text-sm leading-relaxed">{c.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        <div class="bg-success/5 border border-success/25 rounded-2xl p-7 text-center">
+          <h3 class="font-heading font-bold text-primary text-h3 mb-2">¿Cumples los requisitos?</h3>
+          <p class="text-text-body text-sm mb-5">Consúltanos y te ayudamos a inscribirte sin complicaciones.</p>
+          <Button href="/#contacto" variant="primary">Consultar ahora — sin costo</Button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</Layout>

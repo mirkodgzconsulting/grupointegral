@@ -1,0 +1,96 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import Badge from '../../components/ui/Badge.astro';
+import Button from '../../components/ui/Button.astro';
+
+const modules = [
+  { num: '01', title: 'Fundamentos de fiscalidad italiana', desc: 'Sistema tributario, sujetos pasivos, IRPEF, y estructura del sistema fiscal italiano.' },
+  { num: '02', title: 'Declaración de renta (730 e ISEE)', desc: 'Elaboración, presentación y revisión del modello 730 e ISEE. Simulaciones prácticas.' },
+  { num: '03', title: 'Bonificaciones y subsidios del Estado', desc: 'Reddito di cittadinanza, assegno unico, bonus energético y demás prestaciones vigentes.' },
+  { num: '04', title: 'Software fiscal profesional', desc: 'Uso práctico de los programas más utilizados en los CAF de toda Italia.' },
+  { num: '05', title: 'Atención al ciudadano', desc: 'Técnicas de comunicación, gestión de casos complejos y atención a personas vulnerables.' },
+  { num: '06', title: 'Normativa y actualización', desc: 'Legislación vigente, cambios normativos y fuentes de actualización continua.' },
+];
+---
+
+<Layout
+  title="Curso MasterCAF Italia | Conviértete en Operador Fiscal"
+  description="Formación acreditada para trabajar como operador fiscal en CAF en Italia. Alta demanda laboral. Inicio 27 de junio. Plazas limitadas."
+  canonical="https://grupointegral.it/servicios/master-caf"
+  keywords="curso operador fiscal Italia, MasterCAF Milano, formación CAF Italia, trabajo en CAF Italia extranjeros"
+>
+  <Navbar />
+  <main class="pt-28">
+
+    <!-- Hero -->
+    <section class="section-padding bg-bg-section">
+      <div class="container-gi">
+        <nav class="text-xs text-text-body/60 mb-6 flex items-center gap-1.5">
+          <a href="/" class="hover:text-accent transition-colors">Inicio</a>
+          <span>›</span>
+          <span>Servicios</span>
+          <span>›</span>
+          <span>MasterCAF</span>
+        </nav>
+
+        <div class="grid lg:grid-cols-3 gap-12 items-start">
+          <div class="lg:col-span-2">
+            <Badge class="mb-4">Formación acreditada · Próximo inicio: 27 de junio</Badge>
+            <h1 class="font-heading font-bold text-primary mb-5" style="font-size:clamp(30px,5vw,44px);line-height:1.1">
+              MasterCAF — Operador Fiscal en Italia
+            </h1>
+            <p class="text-text-body text-lg leading-relaxed mb-4">
+              Italia cuenta con miles de CAF distribuidos por todo el país que necesitan operadores capacitados. Con la formación correcta, puedes acceder a este mercado laboral con estabilidad real.
+            </p>
+            <p class="text-text-body leading-relaxed">
+              Nuestro programa MasterCAF está diseñado específicamente para personas que quieren cambiar de rubro o mejorar sus ingresos mediante una certificación reconocida. El curso combina teoría, práctica y simulaciones reales del trabajo en un CAF.
+            </p>
+          </div>
+
+          <!-- Sticky price card -->
+          <div class="lg:sticky lg:top-24">
+            <div class="bg-white rounded-card border border-border shadow-lg p-7">
+              <p class="text-xs font-heading font-semibold uppercase tracking-wider text-accent mb-4">Precio de lanzamiento</p>
+              <div class="flex items-end gap-2 mb-1">
+                <span class="font-heading font-bold text-primary" style="font-size:44px;line-height:1">1.000 €</span>
+              </div>
+              <p class="text-text-body/60 text-sm mb-5"><s>Precio regular: 1.300 €</s></p>
+              <div class="bg-amber-50 border border-amber-200 rounded-lg px-4 py-3 mb-5 text-sm text-amber-700 font-medium">
+                📅 Inicio: 27 de junio · Cupos limitados
+              </div>
+              <Button href="/#contacto" variant="primary" size="md" class="w-full justify-center mb-3">
+                Reservar plaza
+              </Button>
+              <Button href="/#contacto" variant="ghost" class="w-full justify-center text-sm">
+                Más información →
+              </Button>
+              <p class="text-xs text-text-body/50 mt-4 text-center">Garantía de devolución 7 días</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modules -->
+    <section class="section-padding bg-white">
+      <div class="container-gi max-w-3xl">
+        <h2 class="font-heading font-bold text-primary text-h2 mb-8">Programa del curso</h2>
+        <div class="space-y-4">
+          {modules.map(m => (
+            <div class="flex gap-5 p-5 bg-bg-section rounded-card border border-border">
+              <span class="font-heading font-bold text-accent text-sm shrink-0 mt-0.5">{m.num}</span>
+              <div>
+                <h3 class="font-heading font-semibold text-primary text-base mb-1">{m.title}</h3>
+                <p class="text-text-body text-sm leading-relaxed">{m.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</Layout>

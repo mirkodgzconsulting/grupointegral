@@ -1,0 +1,36 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import QuienesSomos from '../components/QuienesSomos.astro';
+import PorQueElegirnos from '../components/PorQueElegirnos.astro';
+import MasterCAF from '../components/MasterCAF.astro';
+import ProgramaGOL from '../components/ProgramaGOL.astro';
+import Servicios from '../components/Servicios.astro';
+import Aliados from '../components/Aliados.astro';
+import Testimonios from '../components/Testimonios.astro';
+import Contacto from '../components/Contacto.astro';
+import CTAFinal from '../components/CTAFinal.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="Grupo Integral | Servicios para Inmigrantes en Italia"
+  description="Formación acreditada, asesoría migratoria, servicios fiscales y apoyo para emprender en Italia. Atención en español en Lombardía y online. Consulta gratuita."
+  canonical="https://grupointegral.it"
+>
+  <Navbar />
+  <main>
+    <Hero />
+    <QuienesSomos />
+    <PorQueElegirnos />
+    <MasterCAF />
+    <ProgramaGOL />
+    <Servicios />
+    <Aliados />
+    <Testimonios />
+    <Contacto />
+    <CTAFinal />
+  </main>
+  <Footer />
+</Layout>
